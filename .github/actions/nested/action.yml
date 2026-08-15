@@ -1,0 +1,8 @@
+name: Nested Composite Action
+description: action.yml under .github/, which the plugin glob does match.
+runs:
+  using: composite
+  steps:
+    - name: Scaffold
+      run: pnpm create vite my-app
+      shell: bash

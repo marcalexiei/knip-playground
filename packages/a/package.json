@@ -1,0 +1,10 @@
+{
+  "name": "@playground/a",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "release": "pnpm view @playground/a version"
+  }
+}
