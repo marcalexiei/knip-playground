@@ -1,0 +1,15 @@
+{
+  "name": "@playground/app",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "sass --pkg-importer=node src/main.scss dist/main.css"
+  },
+  "dependencies": {
+    "@playground/styles": "workspace:*"
+  },
+  "devDependencies": {
+    "sass": "1.108.2"
+  }
+}

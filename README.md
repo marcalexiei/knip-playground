@@ -1,18 +1,23 @@
 # knip-playground
 
-Minimal pnpm monorepo reproducing a knip bug (knip 6.32.2, pnpm 11.21.0):
-valid pnpm subcommands are reported as unlisted binaries.
+Minimal pnpm monorepo reproducing a knip false positive (knip 6.48.0, sass
+1.108.2): stylesheets and packages loaded with Sass `meta.load-css()` are
+reported as unused.
 
 ```sh
 pnpm install
+pnpm build
 pnpm exec knip
 ```
+
+`pnpm build` shows that Sass loads both stylesheets from
+`packages/app/src/main.scss`.
 
 Expected no findings, got:
 
 ```text
-Unlisted binaries (3)
-create  .github/actions/nested/action.yml
-info    .github/workflows/ci.yml
-view    packages/a/package.json
+Unused files (1)
+packages/app/src/_partial.scss
+Unused dependencies (1)
+@playground/styles  packages/app/package.json:10:6
 ```

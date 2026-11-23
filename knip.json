@@ -1,0 +1,8 @@
+{
+  "workspaces": {
+    "packages/app": {
+      "entry": ["src/main.scss"]
+    },
+    "packages/styles": {}
+  }
+}

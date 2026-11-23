@@ -1,0 +1,6 @@
+@use 'sass:meta';
+
+@layer base {
+  @include meta.load-css('partial');
+  @include meta.load-css('pkg:@playground/styles/reset');
+}
